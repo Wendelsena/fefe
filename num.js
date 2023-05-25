@@ -1,3 +1,30 @@
+// Seleciona os elementos
+const tabLinks = document.querySelectorAll('.tab-list a');
+const tabContents = document.querySelectorAll('.tab-content');
+
+// Adiciona o evento de clique aos links das abas
+tabLinks.forEach(link => {
+  link.addEventListener('click', e => {
+    e.preventDefault();
+
+    // Remove a classe "active" de todos os links e conteúdos
+    tabLinks.forEach(link => link.classList.remove('active'));
+    tabContents.forEach(content => content.classList.remove('active'));
+
+    // Adiciona a classe "active" ao link e conteúdo selecionados
+    const selectedTab = document.querySelector(link.getAttribute('href'));
+    link.classList.add('active');
+    selectedTab.classList.add('active');
+  });
+});
+function showSidebar() {
+    document.querySelector('.sidebar').classList.remove('hidden');
+  }
+  
+  function hideSidebar() {
+    document.querySelector('.sidebar').classList.add('hidden');
+  }
+  
 function exibirGif(resposta) {
     // Esconda todos os GIFs
     var gifs = document.getElementsByClassName("gif");

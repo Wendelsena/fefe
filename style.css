@@ -1,6 +1,93 @@
+header {
+    background-color: #80008f;
+    padding: 10px;
+    position: fixed;
+
+    width: 100%;
+    top: 0;
+    left: 0;   
+}
+
+h1 {
+    color: #80008f;
+    margin: 0;
+}
+
+nav {
+    margin-top: 10px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #666;
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 200px;
+    height: 100%;
+    background: linear-gradient(to right, rgba(255, 1, 86, 0.5), transparent);
+    transition: transform 0.3s ease;
+  
+    padding: 20px;
+  }
+  .sidebar:hover {
+    transform: translateX(0); /* Mostrar a barra lateral */
+  }
+  
+  .sidebar.hidden {
+    transform: translateX(-200px); /* Esconder a barra lateral */
+  }
+  
+  .tab-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .tab-list li {
+    margin-bottom: 10px;
+  }
+  
+  .tab-list a {
+    text-decoration: none;
+    color: #333;
+  }
+  
+  .content {
+    position: absolute;
+    top: 0;
+    left: 200px; /* Largura da barra lateral */
+    right: 0;
+    bottom: 0;
+    padding: 20px;
+  }
+  
+  .tab-content {
+    display: none;
+  }
+  
+  .tab-content.active {
+    display: block;
+  }
+  
+
 .gif {
     margin: 15px;
-    max-width: 50%;
+    max-width: 30%;
     height: auto;
     border-radius: 10px;
 }
@@ -8,6 +95,7 @@
 .container {
     max-width: 500px;
     margin: 0 auto;
+    margin-top: 200px;
     padding: 20px;
     background-color: #ffffff;
     border-radius: 10px;
@@ -19,6 +107,7 @@ body {
     font-family: 'Comic Sans MS', cursive, sans-serif;
     text-align: center;
     margin-top: 50px;
+    max-width: 700%;
 }
 
 h1 {
