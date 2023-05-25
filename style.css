@@ -1,16 +1,16 @@
 header {
-    background-color: #80008f;
+    background-color: #1B2338;
     padding: 10px;
     position: fixed;
-
     width: 100%;
     top: 0;
     left: 0;   
+    border: 3px solid rgb(34, 33, 33);
 }
 
 h1 {
-    color: #80008f;
-    margin: 0;
+    color: #0048ad;
+    margin: 0px;
 }
 
 nav {
@@ -39,51 +39,50 @@ nav ul li a {
     left: 0;
     width: 200px;
     height: 100%;
-    background: linear-gradient(to right, rgba(255, 1, 86, 0.5), transparent);
+    background: linear-gradient(to right, rgba(120, 1, 255, 0.5), transparent);
     transition: transform 0.3s ease;
-  
     padding: 20px;
-  }
-  .sidebar:hover {
-    transform: translateX(0); /* Mostrar a barra lateral */
-  }
-  
-  .sidebar.hidden {
-    transform: translateX(-200px); /* Esconder a barra lateral */
-  }
-  
-  .tab-list {
+}
+
+.sidebar:hover {
+    transform: translateX(0);
+}
+
+.sidebar.hidden {
+    transform: translateX(-200px);
+}
+
+.tab-list {
     list-style: none;
     padding: 0;
     margin: 0;
-  }
-  
-  .tab-list li {
+}
+
+.tab-list li {
     margin-bottom: 10px;
-  }
-  
-  .tab-list a {
+}
+
+.tab-list a {
     text-decoration: none;
     color: #333;
-  }
-  
-  .content {
+}
+
+.content {
     position: absolute;
     top: 0;
-    left: 200px; /* Largura da barra lateral */
+    left: 200px;
     right: 0;
     bottom: 0;
     padding: 20px;
-  }
-  
-  .tab-content {
+}
+
+.tab-content {
     display: none;
-  }
-  
-  .tab-content.active {
+}
+
+.tab-content.active {
     display: block;
-  }
-  
+}
 
 .gif {
     margin: 15px;
@@ -95,7 +94,7 @@ nav ul li a {
 .container {
     max-width: 500px;
     margin: 0 auto;
-    margin-top: 200px;
+    margin-top: 120px;
     padding: 20px;
     background-color: #ffffff;
     border-radius: 10px;
@@ -103,7 +102,7 @@ nav ul li a {
 }
 
 body {
-    background-color: #ffe6ff;
+    background-color: #bbbbbb;
     font-family: 'Comic Sans MS', cursive, sans-serif;
     text-align: center;
     margin-top: 50px;
@@ -111,7 +110,8 @@ body {
 }
 
 h1 {
-    color: #ff3399;
+    color: #043049;
+    font-size: 180%;
 }
 
 form {
@@ -131,20 +131,21 @@ input[type="number"] {
 
 button {
     padding: 10px 20px;
-    background-color: #ff3399;
+    background-color: #043049;
     color: #ffffff;
     border: none;
     border-radius: 7px;
     cursor: pointer;
-    transition: transform 0.3s ease; /* Adicionando transição suave */
+    transition: transform 0.3s ease;
     margin: 5px;
 }
 
 button:hover {
-    transform: scale(1.1); /* Aplicando a escala quando o mouse estiver sobre o botão */
+    transform: scale(1.1);
 }
+
 button:active {
-    background-color: #ff99cc; /* Alterando a cor de fundo quando o botão é clicado */
+    background-color: #16166d;
 }
 
 p {
@@ -156,14 +157,15 @@ p {
 
 #mensagem {
     margin-top: 20px;
-    background-color: #ffcccc;
+    background-color: #bbbbbb;
     padding: 10px;
     border-radius: 5px;
     width: 80%;
     margin: 0 auto;
+    /* Resto dos estilos... */
+  border: 3px solid rgb(34, 33, 33);
 }
 
-/* Animação */
 @keyframes pulse {
     0% {
         transform: scale(1);
@@ -181,3 +183,39 @@ p {
     animation-duration: 60s;
     animation-iteration-count: infinite;
 }
+
+/* Estilos para telas pequenas */
+@media screen and (max-width: 600px) {
+    .sidebar {
+      width: 100%;
+      height: auto;
+      padding: 10px;
+      position: static;
+      background: none;
+      transform: none;
+      transition: none;
+    }
+  
+    .sidebar.hidden {
+      display: none;
+    }
+  
+    .content {
+      position: static;
+      padding: 10px;
+      margin-top: 10px;
+    }
+  
+    .container {
+      max-width: 100%;
+      margin-top: 100px;
+    }
+  }
+  
+  /* Estilos para telas médias e grandes */
+  @media screen and (min-width: 601px) {
+    .container {
+      max-width: 800px;
+    }
+  }
+  
