@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Informe o quanto você ama o seu namorado</title>
+	<link rel="stylesheet" href="style.css">
+    <script src="num.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Informe o quanto você ama o seu namorado de 0 à 10</h1>
+        <form>
+            <label for="amor">Digite um número:</label>
+            <input type="number" id="amor" name="amor" min="0" step="1" oninput="limitarValor();">
+            <button type="button" id="button" onclick="calcularAmor(); ">Certeza?</button>
+        </form>
+        <p id="mensagem"></p>
+        <div id="videoContainer"></div>
+        <div id="button"></div>
+    </div>
+
+
+
+		
